@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event 1s Mensive eh lah</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎭 Tempat Daftar Event Eh Lah !!!</h1>
+    <div class="card">
+      <label for="userName">Masukin nama kalian okok</label>
+      <input type="text" id="userName" placeholder="e.g. Paje ganteng" />
+
+      <label for="characterSuggestions">Saran Karakter (nanti bakal di randomize ya) (bisa lebih dari 1 tapi tolong dipisahin pake koma misal "Elsa, Anna, Olaf")</label>
+      <textarea id="characterSuggestions" placeholder="e.g. Po, Rapunzel, Paje eh"></textarea>
+
+      <button onclick="submitData()">Kirimm</button>
+      <p id="submitMessage" class="message success"></p>
+    </div>
+
+    <p style="text-align: center; margin-top: 2em;">
+      🔐 <a href="admin.html">Admin Login</a>
+    </p>
+  </div>
+</body>
+</html>
