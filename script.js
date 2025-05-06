@@ -22,13 +22,31 @@ function submitData() {
 }
 
 function showSubmissions() {
+  const listContainer = document.getElementById("submissionList");
+
   if (submissions.length === 0) {
-    document.getElementById("submissionList").innerText = "No submissions yet.";
+    listContainer.innerHTML = "<p>No submissions yet.</p>";
     return;
   }
 
-  let output = submissions.map((s, i) => `${i + 1}. ${s.name} → [${s.suggestions.join(", ")}]`).join("\n");
-  document.getElementById("submissionList").innerText = output;
+  listContainer.innerHTML = "";
+  submissions.forEach((s, index) => {
+    const div = document.createElement("div");
+    div.classList.add("submission-entry");
+    div.innerHTML = `
+      <strong>${s.name}</strong>: [${s.suggestions.join(", ")}]
+      <button class="delete-btn" onclick="deleteSubmission(${index})">Delete</button>
+    `;
+    listContainer.appendChild(div);
+  });
+}
+
+function deleteSubmission(index) {
+  if (confirm("Are you sure you want to delete this submission?")) {
+    submissions.splice(index, 1);
+    localStorage.setItem("submissions", JSON.stringify(submissions));
+    showSubmissions();
+  }
 }
 
 function assignCharacters() {
