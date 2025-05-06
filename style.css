@@ -1,0 +1,98 @@
+/* Reset + Base */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #f2f4f8;
+    padding: 2em;
+    color: #333;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #2c3e50;
+  }
+  
+  /* Cards and Forms */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+  label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+  }
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #27ae60;
+  }
+  
+  /* Output and Messages */
+  .message {
+    margin-top: 1em;
+    font-weight: bold;
+  }
+  .success {
+    color: #27ae60;
+  }
+  .error {
+    color: #e74c3c;
+  }
+  .output {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 8px;
+    white-space: pre-line;
+    font-family: monospace;
+    font-size: 0.95em;
+    margin-top: 1em;
+  }
+  
+  /* Links */
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
