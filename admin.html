@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 Admin Panel</h1>
+
+    <div class="card" id="loginSection">
+      <label for="adminPassword">Enter Admin Password</label>
+      <input type="password" id="adminPassword" placeholder="Password" />
+      <button onclick="checkAdmin()">Login</button>
+      <p id="loginMessage" class="message error"></p>
+    </div>
+
+    <div class="card" id="adminPanel" style="display: none;">
+      <button onclick="showSubmissions()">View Submissions</button>
+      <button onclick="assignCharacters()">Assign Characters</button>
+
+      <h3>📥 Submissions</h3>
+      <pre id="submissionList" class="output">No submissions yet.</pre>
+
+      <h3>🎯 Assigned Characters</h3>
+      <pre id="assignedList" class="output">Not assigned yet.</pre>
+    </div>
+  </div>
+</body>
+</html>
